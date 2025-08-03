@@ -3,16 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Charmr - The #1 AI Dating Assistant. Download now for iOS or join our Android waitlist. Transform your dating experience with AI-powered conversations and matches."
+    />
     <title>Charmr - AI Dating Assistant</title>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- Preload critical fonts -->
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    /></noscript>
+
+    <!-- Preload critical CSS -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="preload"
+      href="./assets/css/styles.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript
+      ><link rel="stylesheet" href="./assets/css/styles.css"
+    /></noscript>
+
+    <!-- Load Font Awesome asynchronously -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    /></noscript>
   </head>
   <body>
     <div class="container">
@@ -24,8 +56,12 @@
         </div>
 
         <div class="download-section">
-          <a href="#" class="download-btn app-store">
-            <i class="fab fa-apple"></i>
+          <a
+            href="#"
+            class="download-btn app-store"
+            aria-label="Download Charmr on the App Store"
+          >
+            <i class="fab fa-apple" aria-hidden="true"></i>
             <div class="btn-text">
               <span class="small-text">Download on the</span>
               <span class="large-text">App Store</span>
@@ -36,8 +72,9 @@
             href="#"
             class="download-btn android-waitlist"
             id="androidWaitlist"
+            aria-label="Join Android waitlist for Charmr"
           >
-            <i class="fab fa-google-play"></i>
+            <i class="fab fa-google-play" aria-hidden="true"></i>
             <div class="btn-text">
               <span class="small-text">Join Android</span>
               <span class="large-text">Waitlist</span>
@@ -49,55 +86,112 @@
       <!-- Footer -->
       <footer class="footer">
         <div class="footer-links">
-          <a href="#" class="footer-link" id="supportLink">Support</a>
-          <a href="#" class="footer-link" id="termsLink">Terms</a>
-          <a href="#" class="footer-link" id="privacyLink">Privacy</a>
+          <a
+            href="#"
+            class="footer-link"
+            id="supportLink"
+            aria-label="Contact support"
+            >Support</a
+          >
+          <a
+            href="#"
+            class="footer-link"
+            id="termsLink"
+            aria-label="View terms of service"
+            >Terms</a
+          >
+          <a
+            href="#"
+            class="footer-link"
+            id="privacyLink"
+            aria-label="View privacy policy"
+            >Privacy</a
+          >
         </div>
 
         <div class="social-icons">
-          <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon" aria-label="Follow us on TikTok"
+            ><i class="fab fa-tiktok" aria-hidden="true"></i
+          ></a>
+          <a href="#" class="social-icon" aria-label="Follow us on Instagram"
+            ><i class="fab fa-instagram" aria-hidden="true"></i
+          ></a>
+          <a
+            href="#"
+            class="social-icon"
+            aria-label="Subscribe to our YouTube channel"
+            ><i class="fab fa-youtube" aria-hidden="true"></i
+          ></a>
         </div>
       </footer>
     </div>
 
     <!-- Modals -->
-    <div class="modal" id="androidModal">
+    <div
+      class="modal"
+      id="androidModal"
+      role="dialog"
+      aria-labelledby="androidModalTitle"
+      aria-hidden="true"
+    >
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Join Android Waitlist</h2>
+        <span class="close" aria-label="Close modal">&times;</span>
+        <h2 id="androidModalTitle">Join Android Waitlist</h2>
         <form class="waitlist-form">
-          <input type="email" placeholder="Enter your email" required />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            aria-label="Email address"
+          />
           <button type="submit">Join Waitlist</button>
         </form>
       </div>
     </div>
 
-    <div class="modal" id="supportModal">
+    <div
+      class="modal"
+      id="supportModal"
+      role="dialog"
+      aria-labelledby="supportModalTitle"
+      aria-hidden="true"
+    >
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Support</h2>
+        <span class="close" aria-label="Close modal">&times;</span>
+        <h2 id="supportModalTitle">Support</h2>
         <p>Need help? Contact us at support@charmr.app</p>
       </div>
     </div>
 
-    <div class="modal" id="termsModal">
+    <div
+      class="modal"
+      id="termsModal"
+      role="dialog"
+      aria-labelledby="termsModalTitle"
+      aria-hidden="true"
+    >
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Terms of Service</h2>
+        <span class="close" aria-label="Close modal">&times;</span>
+        <h2 id="termsModalTitle">Terms of Service</h2>
         <p>Terms of service content will be displayed here.</p>
       </div>
     </div>
 
-    <div class="modal" id="privacyModal">
+    <div
+      class="modal"
+      id="privacyModal"
+      role="dialog"
+      aria-labelledby="privacyModalTitle"
+      aria-hidden="true"
+    >
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Privacy Policy</h2>
+        <span class="close" aria-label="Close modal">&times;</span>
+        <h2 id="privacyModalTitle">Privacy Policy</h2>
         <p>Privacy policy content will be displayed here.</p>
       </div>
     </div>
 
-    <script src="./assets/javascript/script.js"></script>
+    <!-- Defer JavaScript loading -->
+    <script src="./assets/javascript/script.js" defer></script>
   </body>
 </html>
