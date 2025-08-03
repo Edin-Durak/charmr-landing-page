@@ -1,0 +1,314 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.logo-section {
+  margin-bottom: 3rem;
+}
+
+.logo {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff6b9d, #c44569, #4ecdc4, #44a08d);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* Download buttons */
+.download-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #000000;
+  border: 2px solid #333333;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  border-color: #4ecdc4;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(78, 205, 196, 0.3);
+}
+
+.download-btn i {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.btn-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.small-text {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  line-height: 1.2;
+}
+
+.large-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Footer */
+.footer {
+  background-color: #111111;
+  padding: 2rem 1rem;
+  border-top: 1px solid #333333;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #4ecdc4;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #4ecdc4;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #111111;
+  margin: 15% auto;
+  padding: 2rem;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+}
+
+.close:hover {
+  color: #ffffff;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.modal p {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+/* Form styles */
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.waitlist-form input {
+  padding: 0.8rem;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.waitlist-form input::placeholder {
+  color: #666666;
+}
+
+.waitlist-form button {
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #ff6b9d, #4ecdc4);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.waitlist-form button:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .logo {
+    font-size: 5rem;
+  }
+
+  .tagline {
+    font-size: 1.4rem;
+  }
+
+  .download-section {
+    max-width: 350px;
+  }
+
+  .download-btn {
+    padding: 1.2rem 2rem;
+  }
+
+  .download-btn i {
+    font-size: 2.5rem;
+  }
+
+  .large-text {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    font-size: 6rem;
+  }
+
+  .tagline {
+    font-size: 1.6rem;
+  }
+
+  .download-section {
+    max-width: 400px;
+  }
+}
+
+/* Loading animation */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Focus styles for accessibility */
+.download-btn:focus,
+.footer-link:focus,
+.social-icon:focus,
+.waitlist-form input:focus,
+.waitlist-form button:focus {
+  outline: 2px solid #4ecdc4;
+  outline-offset: 2px;
+}

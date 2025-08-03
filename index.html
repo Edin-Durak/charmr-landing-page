@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charmr - AI Dating Assistant</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="logo-section">
+          <h1 class="logo">Charmr</h1>
+          <p class="tagline">#1 AI Dating Assistant</p>
+        </div>
+
+        <div class="download-section">
+          <a href="#" class="download-btn app-store">
+            <i class="fab fa-apple"></i>
+            <div class="btn-text">
+              <span class="small-text">Download on the</span>
+              <span class="large-text">App Store</span>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            class="download-btn android-waitlist"
+            id="androidWaitlist"
+          >
+            <i class="fab fa-google-play"></i>
+            <div class="btn-text">
+              <span class="small-text">Join Android</span>
+              <span class="large-text">Waitlist</span>
+            </div>
+          </a>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-links">
+          <a href="#" class="footer-link" id="supportLink">Support</a>
+          <a href="#" class="footer-link" id="termsLink">Terms</a>
+          <a href="#" class="footer-link" id="privacyLink">Privacy</a>
+        </div>
+
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="androidModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Join Android Waitlist</h2>
+        <form class="waitlist-form">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Join Waitlist</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="supportModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Support</h2>
+        <p>Need help? Contact us at support@charmr.app</p>
+      </div>
+    </div>
+
+    <div class="modal" id="termsModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Terms of Service</h2>
+        <p>Terms of service content will be displayed here.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="privacyModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Privacy Policy</h2>
+        <p>Privacy policy content will be displayed here.</p>
+      </div>
+    </div>
+
+    <script src="./assets/javascript/script.js"></script>
+  </body>
+</html>
