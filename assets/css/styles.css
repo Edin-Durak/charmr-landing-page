@@ -209,7 +209,7 @@ body {
 /* Mobile modal adjustments */
 @media (max-width: 500px) {
   .modal-content {
-    width: 90%;
+    width: 85%;
     margin: 10% auto;
     padding: 1.5rem;
     max-width: none;

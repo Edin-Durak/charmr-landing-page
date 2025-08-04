@@ -156,28 +156,48 @@ document.addEventListener("DOMContentLoaded", () => {
 // Add touch support for mobile devices
 let touchStartY = 0;
 let touchEndY = 0;
+let touchStartX = 0;
+let touchEndX = 0;
+let touchStartedInModal = false;
 
 document.addEventListener("touchstart", (e) => {
-  touchStartY = e.changedTouches[0].screenY;
+  // Check if touch started inside a modal
+  const modalContent = e.target.closest(".modal-content");
+  touchStartedInModal = !!modalContent;
+
+  if (!touchStartedInModal) {
+    touchStartY = e.changedTouches[0].screenY;
+    touchStartX = e.changedTouches[0].screenX;
+  }
 });
 
 document.addEventListener("touchend", (e) => {
-  touchEndY = e.changedTouches[0].screenY;
-  handleSwipe();
+  if (!touchStartedInModal) {
+    touchEndY = e.changedTouches[0].screenY;
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }
 });
 
 function handleSwipe() {
-  const swipeThreshold = 50;
-  const diff = touchStartY - touchEndY;
+  const swipeThreshold = 100; // Increased threshold for more intentional swipes
+  const verticalDiff = touchStartY - touchEndY;
+  const horizontalDiff = Math.abs(touchStartX - touchEndX);
 
-  if (Math.abs(diff) > swipeThreshold) {
-    // Close modals on swipe down
-    if (diff < 0) {
-      Object.values(modals).forEach((modal) => {
-        if (modal.style.display === "block") {
-          closeModal(modal);
-        }
-      });
-    }
+  // Only close modal on intentional downward swipe (not scrolling)
+  // Check if it's a primarily vertical swipe and downward direction
+  if (
+    Math.abs(verticalDiff) > swipeThreshold &&
+    Math.abs(verticalDiff) > horizontalDiff &&
+    verticalDiff < 0
+  ) {
+    // Negative means swipe down
+
+    // Check if any modal is currently open
+    Object.values(modals).forEach((modal) => {
+      if (modal.style.display === "block") {
+        closeModal(modal);
+      }
+    });
   }
 }
