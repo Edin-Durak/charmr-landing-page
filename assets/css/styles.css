@@ -199,6 +199,13 @@ body {
   font-size: 0.9rem;
 }
 
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .download-btn.android-waitlist {
+    width: 200px;
+  }
+}
+
 /* Mobile modal adjustments */
 @media (max-width: 500px) {
   .modal-content {
@@ -235,45 +242,6 @@ body {
   .terms-content ul {
     margin-left: 1rem;
   }
-}
-
-/* Form styles */
-.waitlist-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.waitlist-form input {
-  padding: 0.8rem;
-  border: 1px solid #333333;
-  border-radius: 8px;
-  background-color: #000000;
-  color: #ffffff;
-  font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.waitlist-form input::placeholder {
-  color: #666666;
-}
-
-.waitlist-form button {
-  padding: 0.8rem;
-  background: linear-gradient(135deg, #ff6b9d, #4ecdc4);
-  border: none;
-  border-radius: 8px;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  width: 100%;
-}
-
-.waitlist-form button:hover {
-  transform: translateY(-2px);
 }
 
 /* Loading animation */
