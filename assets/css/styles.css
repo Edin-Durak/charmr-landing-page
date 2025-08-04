@@ -15,6 +15,7 @@ body {
 /* Hover effects */
 .download-btn:hover {
   border-color: #4ecdc4;
+  transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(78, 205, 196, 0.3);
 }
 
@@ -45,15 +46,17 @@ body {
 
 .modal-content {
   background-color: #111111;
-  margin: 15% auto;
+  margin: 5% auto 15%;
   padding: 2rem;
   border: 1px solid #333333;
   border-radius: 12px;
   width: 90%;
-  max-width: 400px;
+  max-width: 600px;
   position: relative;
   animation: modalSlideIn 0.3s ease-out;
   box-sizing: border-box;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 @keyframes modalSlideIn {
@@ -92,6 +95,58 @@ body {
   line-height: 1.6;
 }
 
+/* Terms content styling */
+.terms-content {
+  margin-top: 1rem;
+}
+
+.terms-content section {
+  margin-bottom: 1.5rem;
+}
+
+.terms-content h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.terms-content p {
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.terms-content ul {
+  margin: 0.5rem 0 0.5rem 1.5rem;
+  color: #cccccc;
+}
+
+.terms-content li {
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+.terms-content address {
+  color: #cccccc;
+  font-style: normal;
+  margin: 0.5rem 0;
+}
+
+.terms-content a {
+  color: #4ecdc4;
+  text-decoration: none;
+}
+
+.terms-content a:hover {
+  text-decoration: underline;
+}
+
+.terms-content em {
+  color: #999999;
+  font-size: 0.9rem;
+}
+
 /* Mobile modal adjustments */
 @media (max-width: 500px) {
   .modal-content {
@@ -99,6 +154,7 @@ body {
     margin: 10% auto;
     padding: 1.5rem;
     max-width: none;
+    max-height: 85vh;
   }
 
   .modal h2 {
@@ -114,6 +170,18 @@ body {
     font-size: 24px;
     right: 0.8rem;
     top: 0.3rem;
+  }
+
+  .terms-content h3 {
+    font-size: 1rem;
+  }
+
+  .terms-content p {
+    font-size: 0.9rem;
+  }
+
+  .terms-content ul {
+    margin-left: 1rem;
   }
 }
 
