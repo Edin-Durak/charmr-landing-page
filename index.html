@@ -110,6 +110,7 @@
       .download-btn {
         display: flex;
         align-items: center;
+        justify-content: center;
         padding: 1rem 1.5rem;
         background-color: #000000;
         border: 2px solid #333333;
@@ -118,6 +119,18 @@
         color: #ffffff;
         transition: all 0.3s ease;
         cursor: pointer;
+        margin: 0 auto;
+      }
+
+      .download-btn.app-store {
+        border: none;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #ffffff;
+      }
+
+      .download-btn-image {
+        width: 200px;
       }
 
       .download-btn i {
@@ -251,7 +264,7 @@
           </a>
 
           <a
-            href="#"
+            href="https://forms.gle/33qTZWvZNLbAa4Vu8"
             class="download-btn android-waitlist"
             id="androidWaitlist"
             aria-label="Join Android waitlist for Charmr"
