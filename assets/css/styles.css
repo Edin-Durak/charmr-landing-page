@@ -147,6 +147,58 @@ body {
   font-size: 0.9rem;
 }
 
+/* Privacy content styling */
+.privacy-content {
+  margin-top: 1rem;
+}
+
+.privacy-content section {
+  margin-bottom: 1.5rem;
+}
+
+.privacy-content h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.privacy-content p {
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.privacy-content ul {
+  margin: 0.5rem 0 0.5rem 1.5rem;
+  color: #cccccc;
+}
+
+.privacy-content li {
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+.privacy-content address {
+  color: #cccccc;
+  font-style: normal;
+  margin: 0.5rem 0;
+}
+
+.privacy-content a {
+  color: #4ecdc4;
+  text-decoration: none;
+}
+
+.privacy-content a:hover {
+  text-decoration: underline;
+}
+
+.privacy-content em {
+  color: #999999;
+  font-size: 0.9rem;
+}
+
 /* Mobile modal adjustments */
 @media (max-width: 500px) {
   .modal-content {
