@@ -1,14 +1,10 @@
 // Modal functionality
 const modals = {
-  android: document.getElementById("androidModal"),
-  support: document.getElementById("supportModal"),
   terms: document.getElementById("termsModal"),
   privacy: document.getElementById("privacyModal"),
 };
 
 const modalTriggers = {
-  android: document.getElementById("androidWaitlist"),
-  support: document.getElementById("supportLink"),
   terms: document.getElementById("termsLink"),
   privacy: document.getElementById("privacyLink"),
 };
@@ -70,47 +66,6 @@ Object.values(modals).forEach((modal) => {
     });
   }
 });
-
-// Android waitlist form handling
-const waitlistForm = document.querySelector(".waitlist-form");
-if (waitlistForm) {
-  waitlistForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const emailInput = waitlistForm.querySelector('input[type="email"]');
-    const submitBtn = waitlistForm.querySelector('button[type="submit"]');
-
-    if (emailInput && submitBtn) {
-      const email = emailInput.value.trim();
-
-      if (email) {
-        // Add loading state
-        submitBtn.textContent = "Joining...";
-        submitBtn.disabled = true;
-        submitBtn.classList.add("loading");
-
-        // Simulate form submission (replace with actual API call)
-        setTimeout(() => {
-          // Success state
-          submitBtn.textContent = "Joined!";
-          submitBtn.style.background =
-            "linear-gradient(135deg, #4ecdc4, #44a08d)";
-
-          // Reset form after delay
-          setTimeout(() => {
-            closeModal(modals.android);
-            waitlistForm.reset();
-            submitBtn.textContent = "Join Waitlist";
-            submitBtn.disabled = false;
-            submitBtn.classList.remove("loading");
-            submitBtn.style.background =
-              "linear-gradient(135deg, #ff6b9d, #4ecdc4)";
-          }, 2000);
-        }, 1500);
-      }
-    }
-  });
-}
 
 // Smooth scroll for anchor links - Fixed selector issue
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
