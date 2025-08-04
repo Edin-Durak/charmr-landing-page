@@ -9,6 +9,8 @@
     />
     <title>Charmr - AI Dating Assistant</title>
 
+    <link rel="icon" href="./assets/images/favicon.png" />
+
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,11 +63,17 @@
         text-align: center;
       }
 
+      .logo-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+      }
+
       .logo {
         font-size: 4rem;
         font-weight: 700;
         margin-bottom: 0.5rem;
-        background: linear-gradient(135deg, #ff6b9d, #c44569, #4ecdc4, #44a08d);
+        background: linear-gradient(135deg, #00d4ff, #0099cc, #6a4c93, #8b5cf6);
         background-size: 300% 300%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -214,10 +222,20 @@
     <div class="container">
       <!-- Main Content -->
       <main class="main-content">
-        <div class="logo-section">
-          <h1 class="logo">Charmr</h1>
+        <section
+          class="logo-section"
+          aria-label="charmrAIDatingAssistant"
+          id="logo-section"
+        >
+          <img
+            src="./assets/images/charmr-logo.png"
+            alt="Charmr - AI Dating Assistant"
+            class="logo-image"
+            loading="eager"
+          />
+          <h1 class="logo" id="charmrAIDatingAssistant">Charmr</h1>
           <p class="tagline">#1 AI Dating Assistant</p>
-        </div>
+        </section>
 
         <div class="download-section">
           <a
