@@ -21,10 +21,6 @@ body {
   color: #4ecdc4;
 }
 
-.social-icon:hover {
-  color: #4ecdc4;
-}
-
 /* Modal styles */
 .modal {
   display: none;
